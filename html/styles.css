@@ -1,0 +1,143 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+}
+
+.navbar .menu a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 12s infinite;
+    z-index: -1; 
+}
+
+@keyframes slide {
+    0% { background-image: url('C:/Users/Dell/Downloads/WhatsApp Image 2024-12-23 at 8.27.39 PM.jpeg'); }
+    33% { background-image: url('C:/Users/Dell/Downloads/WhatsApp Image 2024-12-23 at 8.27.41 PM.jpeg'); }
+    66% { background-image: url('C:/Users/Dell/Downloads/WhatsApp Image 2024-12-23 at 8.27.44 PM.jpeg'); }
+    100% { background-image: url('C:/Users/Dell/Downloads/WhatsApp Image 2024-12-23 at 8.27.47 PM.jpeg'); }
+}
+
+.hero-content {
+    max-width: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.products {
+    padding: 2rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.product img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+.buy-now {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now:hover {
+    background-color: #0056b3;
+}
+.product {
+    text-align: center;
+}
+
+.product img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+.buy-now {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now:hover {
+    background-color: #0056b3;
+}

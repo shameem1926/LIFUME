@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #94c9e2, #dbd7d6, #64524d);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .product {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="product-info" class="product">Loading...</div>
+    <script>
+        // Get query parameters from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+
+        // Display product name
+        const productInfo = document.getElementById('product-info');
+        productInfo.textContent = product ? `You are purchasing: ${product}` : "Successfully added to cart";
+    </script>
+</body>
+</html>

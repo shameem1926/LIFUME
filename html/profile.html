@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .profile-container {
+            background-color: #fff;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            transform: rotateY(20deg);
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .profile-container:hover {
+            transform: rotateY(0deg);
+        }
+
+        .profile-container h1 {
+            margin-bottom: 20px;
+            font-size: 32px;
+            color: #333;
+        }
+
+        .profile-container p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .profile-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-container label {
+            margin-bottom: 5px;
+            color: #555;
+            text-align: left;
+        }
+
+        .profile-container input {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .profile-container button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .profile-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Your Profile</h1>
+        <p>Manage your account details</p>
+        <form id="profile-form">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" value="shameem" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="shameem1926" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('profile-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Profile updated successfully!');
+            // Redirect to home page after profile update
+            window.location.href = 'perfume.html'; // Replace 'perfume.html' with your home page URL
+        });
+    </script>
+</body>
+</html>
